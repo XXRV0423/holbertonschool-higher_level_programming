@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 name = "Xander"
 age = 20
 fav_game = "Rainbow Six Siege"
