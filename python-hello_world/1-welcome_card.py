@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 name = input("What is your name? ")
 age = int(input("What is your age? "))
 fav_subject = input("What is your favorite subject? ")
