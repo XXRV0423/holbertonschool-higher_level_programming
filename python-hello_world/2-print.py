@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-"""A script that prints "Programming is like building a multilingual puzzle" to the console."""
+"""Print a specific sentence."""
 print('"Programming is like building a multilingual puzzle')
