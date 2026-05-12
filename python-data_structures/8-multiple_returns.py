@@ -1,0 +1,11 @@
+#!/usr/bin/python3
+"""Return multiple values as a tuple."""
+
+
+def multiple_returns(sentence):
+    length = len(sentence)
+
+    if length == 0:
+        return (0, None)
+
+    return (length, sentence[0])
