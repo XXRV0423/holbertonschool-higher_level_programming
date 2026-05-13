@@ -8,6 +8,7 @@ Returns:
     The key with the highest value, or None if the dictionary is empty.
 """
 
+
 def best_score(a_dictionary):
     if not a_dictionary:
         return None
