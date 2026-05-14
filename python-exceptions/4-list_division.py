@@ -1,0 +1,34 @@
+#!/usr/bin/python3
+"""Defines a list division function.
+Arguments:
+    my_list_1 (list): The first list to divide.
+    my_list_2 (list): The second list to divide.
+    list_length (int): The number of elements to divide.
+Returns:
+    A new list of length list_length containing all the divisions.
+"""
+
+
+def list_division(my_list_1, my_list_2, list_length):
+    new_list = []
+
+    for i in range(list_length):
+        try:
+            result = my_list_1[i] / my_list_2[i]
+
+        except ZeroDivisionError:
+            print("division by 0")
+            result = 0
+
+        except (TypeError, ValueError):
+            print("wrong type")
+            result = 0
+
+        except IndexError:
+            print("out of range")
+            result = 0
+
+        finally:
+            new_list.append(result)
+
+    return new_list
