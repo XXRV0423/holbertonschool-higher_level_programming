@@ -1,0 +1,36 @@
+>>> Square = __import__('3-square').Square
+
+>>> my_square_1 = Square(3)
+>>> my_square_1.area()
+9
+
+>>> my_square_2 = Square(5)
+>>> my_square_2.area()
+25
+
+>>> my_square_3 = Square()
+>>> my_square_3.area()
+0
+
+>>> my_square_1.size
+Traceback (most recent call last):
+...
+AttributeError: 'Square' object has no attribute 'size'
+
+>>> my_square_1.__size
+Traceback (most recent call last):
+...
+AttributeError: 'Square' object has no attribute '__size'
+
+>>> Square("3")
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+>>> Square(-4)
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0
+
+>>> Square(10).area()
+100
