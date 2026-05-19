@@ -1,0 +1,22 @@
+>>> Square = __import__('1-square').Square
+
+>>> my_square = Square(3)
+>>> type(my_square)
+<class '1-square.Square'>
+
+>>> my_square.__dict__
+{'_Square__size': 3}
+
+>>> my_square.size
+Traceback (most recent call last):
+...
+AttributeError: 'Square' object has no attribute 'size'
+
+>>> my_square.__size
+Traceback (most recent call last):
+...
+AttributeError: 'Square' object has no attribute '__size'
+
+>>> my_square2 = Square(10)
+>>> my_square2.__dict__
+{'_Square__size': 10}
