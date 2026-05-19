@@ -1,0 +1,33 @@
+>>> Square = __import__('4-square').Square
+
+>>> my_square = Square(89)
+>>> my_square.area()
+7921
+
+>>> my_square.size
+89
+
+>>> my_square.size = 3
+>>> my_square.area()
+9
+
+>>> my_square.size
+3
+
+>>> Square().size
+0
+
+>>> Square(-1)
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0
+
+>>> Square("5")
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+>>> my_square.size = "5 feet"
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
