@@ -1,0 +1,55 @@
+>>> Node = __import__('100-singly_linked_list').Node
+>>> SinglyLinkedList = __import__('100-singly_linked_list').SinglyLinkedList
+
+>>> node = Node(10)
+>>> node.data
+10
+
+>>> node.next_node is None
+True
+
+>>> node.data = 20
+>>> node.data
+20
+
+>>> Node("10")
+Traceback (most recent call last):
+...
+TypeError: data must be an integer
+
+>>> node.next_node = "bad"
+Traceback (most recent call last):
+...
+TypeError: next_node must be a Node object
+
+>>> node2 = Node(30)
+>>> node.next_node = node2
+>>> node.next_node.data
+30
+
+>>> sll = SinglyLinkedList()
+>>> print(sll)
+<BLANKLINE>
+
+
+>>> sll.sorted_insert(2)
+>>> sll.sorted_insert(5)
+>>> sll.sorted_insert(3)
+>>> sll.sorted_insert(1)
+>>> print(sll)
+1
+2
+3
+5
+
+>>> sll.sorted_insert(-4)
+>>> sll.sorted_insert(10)
+>>> sll.sorted_insert(3)
+>>> print(sll)
+-4
+1
+2
+3
+3
+5
+10
