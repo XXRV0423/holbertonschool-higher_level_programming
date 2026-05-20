@@ -1,0 +1,41 @@
+>>> Square = __import__('102-square').Square
+
+>>> s1 = Square(5)
+>>> s2 = Square(6)
+
+>>> s1 < s2
+True
+
+>>> s1 <= s2
+True
+
+>>> s1 == s2
+False
+
+>>> s1 != s2
+True
+
+>>> s1 > s2
+False
+
+>>> s1 >= s2
+False
+
+>>> Square(4) == Square(4)
+True
+
+>>> Square(7) > Square(3)
+True
+
+>>> Square(2.5).area()
+6.25
+
+>>> Square("5")
+Traceback (most recent call last):
+...
+TypeError: size must be a number
+
+>>> Square(-2)
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0
