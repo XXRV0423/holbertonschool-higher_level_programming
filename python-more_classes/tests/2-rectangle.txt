@@ -1,0 +1,49 @@
+>>> Rectangle = __import__('2-rectangle').Rectangle
+
+>>> my_rectangle = Rectangle(2, 4)
+>>> my_rectangle.area()
+8
+
+>>> my_rectangle.perimeter()
+12
+
+>>> my_rectangle.width = 10
+>>> my_rectangle.height = 3
+
+>>> my_rectangle.area()
+30
+
+>>> my_rectangle.perimeter()
+26
+
+>>> Rectangle().area()
+0
+
+>>> Rectangle().perimeter()
+0
+
+>>> Rectangle(0, 5).perimeter()
+0
+
+>>> Rectangle(5, 0).perimeter()
+0
+
+>>> Rectangle("2", 4)
+Traceback (most recent call last):
+...
+TypeError: width must be an integer
+
+>>> Rectangle(2, "4")
+Traceback (most recent call last):
+...
+TypeError: height must be an integer
+
+>>> Rectangle(-1, 4)
+Traceback (most recent call last):
+...
+ValueError: width must be >= 0
+
+>>> Rectangle(2, -1)
+Traceback (most recent call last):
+...
+ValueError: height must be >= 0
