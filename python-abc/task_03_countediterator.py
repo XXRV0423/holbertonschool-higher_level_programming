@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Module that defines a CountedIterator class."""
 
+
 class CountedIterator:
     """An iterator that counts iterated items."""
 
