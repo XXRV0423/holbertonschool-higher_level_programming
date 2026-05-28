@@ -12,6 +12,16 @@
 >>> print(my_list)
 [1, 4, 2, 3, 5]
 
+>>> negative_list = MyList()
+>>> negative_list.append(10)
+>>> negative_list.append(-2)
+>>> negative_list.append(7)
+>>> negative_list.append(-8)
+>>> negative_list.print_sorted()
+[-8, -2, 7, 10]
+>>> print(negative_list)
+[10, -2, 7, -8]
+
 >>> empty_list = MyList()
 >>> empty_list.print_sorted()
 []
