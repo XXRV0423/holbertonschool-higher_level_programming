@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Script that reads stdin and computes metrics"""
 
-import code
 import sys
 
 
