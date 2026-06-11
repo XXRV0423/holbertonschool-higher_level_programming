@@ -30,7 +30,7 @@ def get_user(username):
 
 @app.route("/add_user", methods=["POST"])
 def add_user():
-    data = request.get_json(silent=True)
+    data = request.get_json(force=True, silent=True)
     if not data:
         return jsonify({"error": "Invalid JSON data"}), 400
 
