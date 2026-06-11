@@ -5,17 +5,17 @@ import json
 class SimpleAPIHandler(http.server.BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path == "/":
-            self._respond(200, "text/plain", "Hello this is a simple API!")
+            self._respond(200, "text/plain", "Hello, this is a simple API!")
         elif self.path == "/data":
             payload = {"name": "John", "age": 30, "city": "New York"}
             self._respond(200, "application/json", json.dumps(payload))
         elif self.path == "/status":
-            self._respond(200, "text/plain", "Status: OK")
+            self._respond(200, "application/json", json.dumps({"status": "OK"}))
         elif self.path == "/info":
             payload = {"version": "1.0", "description": "A simple API built with http.server"}
             self._respond(200, "application/json", json.dumps(payload))
         else:
-            self._respond(404, "text/plain", "Endpoint not found")
+            self._respond(404, "application/json", json.dumps({"error": "Endpoint not found"}))
         
 
     def _respond(self, status_code, content_type, body):
