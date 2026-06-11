@@ -15,7 +15,7 @@ class SimpleAPIHandler(http.server.BaseHTTPRequestHandler):
             payload = {"version": "1.0", "description": "A simple API built with http.server"}
             self._respond(200, "application/json", json.dumps(payload))
         else:
-            self._respond(404, "text/plain", "Not Found")
+            self._respond(404, "text/plain", "Endpoint not found")
         
 
     def _respond(self, status_code, content_type, body):
