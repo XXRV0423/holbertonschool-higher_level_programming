@@ -45,5 +45,10 @@ def add_user():
     return jsonify({"message": "User added successfully"}), 201
 
 
+app.errorhandler(404)
+def not_found(e):
+    return jsonify({"error": "User not found"}), 404
+
+
 if __name__ == "__main__":
     app.run()
