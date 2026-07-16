@@ -51,10 +51,10 @@ def generate_invitations(template, attendees):
 
         output_filename = "output_{}.txt".format(index)
         try:
-            with open(output_filename, "w") as output_filename:
+            with open(output_filename, "w") as output_file:
                 output_file.write(content)
             logger.info("Generated %s", output_filename)
-        except IDError as e:
+        except IOError as e:
             logger.error("Failed to write %s: %s", output_filename, e)
 
 
